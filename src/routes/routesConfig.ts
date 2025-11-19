@@ -28,5 +28,35 @@ export const routes = [
     title: "Props",
     description: "Paso de props a componentes",
     component: React.lazy(() => import("../pages/Ejem_04")),
+  },{
+    to: "Ejem5",
+    title: "",
+    description: "",
+    component: React.lazy(() => import("../pages/Ejem_05")),
+  },{
+    to: "Ejem6",
+    title: "Comunicacion hijo padre",
+    description: "",
+    component: React.lazy(() => import("../pages/Ejem_06")),
+  },{
+    to: "Ejem7",
+    title: "hook useState",
+    description: "",
+    component: React.lazy(() => import("../pages/Ejem_07")),
+  },{
+    to: "Ejem8",
+    title: "Pasar los hijos de un componente",
+    description: "",
+    component: React.lazy(() => import("../pages/Ejem_08")),
+  },{
+    to: "Ejem9",
+    title: "",
+    description: "",
+    component: React.lazy(() => import("../pages/Ejem_09")),
+  },{
+    to: "Ejem10",
+    title: "",
+    description: "",
+    component: React.lazy(() => import("../pages/Ejem_10")),
   },
 ];
