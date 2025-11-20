@@ -58,5 +58,25 @@ export const routes = [
     title: "",
     description: "",
     component: React.lazy(() => import("../pages/Ejem_10")),
+  },{
+    to: "Ejem11",
+    title: "",
+    description: "",
+    component: React.lazy(() => import("../pages/Ejem_11")),
+  },{
+    to: "Ejercicio01",
+    title: "",
+    description: "",
+    component: React.lazy(() => import("../pages/Ejercicio_01")),
+  },{
+    to: "Ejercicio02",
+    title: "",
+    description: "",
+    component: React.lazy(() => import("../pages/Ejercicio_02")),
+  },{
+    to: "Ejercicio03",
+    title: "",
+    description: "",
+    component: React.lazy(() => import("../pages/Ejercicio_03")),
   },
 ];
