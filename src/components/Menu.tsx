@@ -20,6 +20,7 @@ function Menu() {
             <li><Link to="/Ejem14">Ejem14</Link></li>
             <li><Link to="/Ejem15">Ejem15</Link></li>
             <li><Link to="/Ejem16">Ejem16</Link></li>
+            <li><Link to="/Ejem17">Ejem17</Link></li>
             <li><Link to="/Ejercicio01">Ejercicio01</Link></li>
             <li><Link to="/Ejercicio02">Ejercicio02</Link></li>
             <li><Link to="/Ejercicio03">Ejercicio03</Link></li>
