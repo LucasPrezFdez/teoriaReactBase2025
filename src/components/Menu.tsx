@@ -24,6 +24,9 @@ function Menu() {
             <li><Link to="/Ejercicio01">Ejercicio01</Link></li>
             <li><Link to="/Ejercicio02">Ejercicio02</Link></li>
             <li><Link to="/Ejercicio03">Ejercicio03</Link></li>
+            <li><Link to="/Ejercicio04">Ejercicio04</Link></li>
+            <li><Link to="/Ejercicio05">Ejercicio05</Link></li>
+            <li><Link to="/Ejercicio06">Ejercicio06</Link></li>
         </ul> 
     </nav>
      );
