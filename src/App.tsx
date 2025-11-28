@@ -5,6 +5,7 @@ import NotFound from "./pages/NotFound";
 import Home from "./pages/Home";
 import { routes } from "./routes/routesConfig";
 import { Suspense } from "react";
+import Ejem_21 from "./pages/Ejem_21";
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
               .map(({ to, component: Component }) => (
                 <Route key={to} path={to || ""} element={<Component />} />
               ))}
-            
+            <Route path="Ejem21/:id" element={<Ejem_21/>} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>

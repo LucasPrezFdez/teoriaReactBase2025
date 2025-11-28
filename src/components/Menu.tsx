@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 function Menu() {
     return ( 
     <nav className="">
-       <ul className="flex flex-row gap-4">
+       <ul className="flex flex-row gap-4 flex-wrap">
             <li><Link to="/Ejem1">Ejem01</Link></li>
             <li><Link to="/Ejem2">Ejem02</Link></li>
             <li><Link to="/Ejem3">Ejem03</Link></li>
@@ -21,12 +21,21 @@ function Menu() {
             <li><Link to="/Ejem15">Ejem15</Link></li>
             <li><Link to="/Ejem16">Ejem16</Link></li>
             <li><Link to="/Ejem17">Ejem17</Link></li>
+            <li><Link to="/Ejem18">Ejem18</Link></li>
+            <li><Link to="/Ejem19">Ejem19</Link></li>
+            <li><Link to="/Ejem20">Ejem20</Link></li>
+            <li><Link to="/Ejem21/44">Ejem21</Link></li>
+            <li><Link to="/Ejem22">Ejem22</Link></li>
+            <li><Link to="/Ejem23">Ejem23</Link></li>
+            <li><Link to="/Ejem24">Ejem24</Link></li>
             <li><Link to="/Ejercicio01">Ejercicio01</Link></li>
             <li><Link to="/Ejercicio02">Ejercicio02</Link></li>
             <li><Link to="/Ejercicio03">Ejercicio03</Link></li>
             <li><Link to="/Ejercicio04">Ejercicio04</Link></li>
             <li><Link to="/Ejercicio05">Ejercicio05</Link></li>
             <li><Link to="/Ejercicio06">Ejercicio06</Link></li>
+            <li><Link to="/Ejercicio07">Ejercicio07</Link></li>
+            <li><Link to="/Ejercicio08">Ejercicio08</Link></li>
         </ul> 
     </nav>
      );

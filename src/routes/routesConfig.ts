@@ -94,6 +94,41 @@ export const routes = [
     description: "",
     component: React.lazy(() => import("../pages/Ejem_17")),
   },{
+    to: "Ejem18",
+    title: "",
+    description: "",
+    component: React.lazy(() => import("../pages/Ejem_18")),
+  },{
+    to: "Ejem19",
+    title: "",
+    description: "",
+    component: React.lazy(() => import("../pages/Ejem_19")),
+  },{
+    to: "Ejem20",
+    title: "",
+    description: "",
+    component: React.lazy(() => import("../pages/Ejem_20")),
+  },{
+    to: "Ejem21",
+    title: "",
+    description: "",
+    component: React.lazy(() => import("../pages/Ejem_21")),
+  },{
+    to: "Ejem22",
+    title: "",
+    description: "",
+    component: React.lazy(() => import("../pages/Ejem_22")),
+  },{
+    to: "Ejem23",
+    title: "",
+    description: "",
+    component: React.lazy(() => import("../pages/Ejem_23")),
+  },{
+    to: "Ejem24",
+    title: "",
+    description: "",
+    component: React.lazy(() => import("../pages/Ejem_24")),
+  },{
     to: "Ejercicio01",
     title: "",
     description: "",
@@ -123,5 +158,25 @@ export const routes = [
     title: "",
     description: "",
     component: React.lazy(() => import("../pages/Ejercicio_06")),
+  },{
+    to: "Ejercicio07",
+    title: "",
+    description: "",
+    component: React.lazy(() => import("../pages/Ejercicio_07")),
+  },{
+    to: "Ejercicio08",
+    title: "",
+    description: "",
+    component: React.lazy(() => import("../pages/Ejercicio_08")),
+  },{
+    to: "Ejercicio09",
+    title: "",
+    description: "",
+    component: React.lazy(() => import("../pages/Ejercicio_09")),
+  },{
+    to: "Ejercicio10",
+    title: "",
+    description: "",
+    component: React.lazy(() => import("../pages/Ejercicio_10")),
   },
 ];
