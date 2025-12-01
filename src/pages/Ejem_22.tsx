@@ -1,31 +1,60 @@
-import { useState } from "react";
+import { useEffect, useState, type FormEvent } from "react"
+import { useSearchParams } from "react-router-dom"
 
-// este hook personalizado deberia estar en una carpeta llamada hooks
-function useCounter() {
+const names = ['Ana', 'Juan', 'Luis', 'Carlos', 'Andrés', 'Antonio']
 
-  const [count, setCount] = useState(0)
+export default function Ejem_22() {
+  const [searchParams, setSearchParams] = useSearchParams()
 
-  function increment() {
-    setCount(count+1)
+  const qFromUrl = searchParams.get('q') ?? ''
+
+  const [search, setSearch] = useState(qFromUrl)
+  const [nombresFiltrados, setNombresFiltrados] = useState<string[]>(names)
+
+  useEffect(() => {
+    setSearch(qFromUrl)
+
+    const query = qFromUrl.trim().toLowerCase()
+
+    if (!query) {
+      setNombresFiltrados(names)
+      return
+    }
+
+    const temp = names.filter(name =>
+      name.toLowerCase().startsWith(query)
+    )
+
+    setNombresFiltrados(temp)
+  }, [qFromUrl])
+
+  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault()
+
+    const query = search.trim()
+    if (query) {
+      setSearchParams({ q: query })
+    } else {
+      setSearchParams({})
+    }
   }
-  function decrement() {
-    setCount(count-1)
-  }
-  function reset() {
-    setCount(0)
-  }
 
-  return {count, increment, decrement, reset}
-}
+  return (
+    <div>
+      <form onSubmit={handleSubmit}>
+        <input
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+          placeholder="Buscar por nombre..."
+        />
+        <button type="submit">Buscar</button>
+      </form>
 
-export default function Ejem_21() {
-  
-  const {count, increment, decrement ,reset} = useCounter()
-
-  return <div>
-    <button onClick={increment}>Sube</button>
-    <button onClick={decrement}>Baja</button>
-    <button onClick={reset}>Resetear</button>
-    <div>{count}</div>
-  </div>
+      <ul>
+        {nombresFiltrados.map((name, index) => (
+          <li key={index}>{name}</li>
+        ))}
+      </ul>
+    </div>
+  )
 }

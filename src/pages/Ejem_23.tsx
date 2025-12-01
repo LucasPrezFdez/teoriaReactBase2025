@@ -1,31 +1,33 @@
-import { useState } from "react";
+import { ThemeProvider } from '../contexts/ThemeProvider';
+import { useTheme } from '../hooks/useTheme';
 
-// este hook personalizado deberia estar en una carpeta llamada hooks
-function useCounter() {
+function A() {
+  const { theme, setTheme } = useTheme();
+  return (
+    <>
+      <div>{theme}</div>
+      <button onClick={() => setTheme('dark')}>Cambia a negro</button>
+      <button onClick={() => setTheme('light')}>Cambia a blanco</button>
+    </>
+  );
+}
 
-  const [count, setCount] = useState(0)
-
-  function increment() {
-    setCount(count+1)
-  }
-  function decrement() {
-    setCount(count-1)
-  }
-  function reset() {
-    setCount(0)
-  }
-
-  return {count, increment, decrement, reset}
+function B() {
+  const { theme } = useTheme();
+  return (
+    <>
+      <div> {theme} </div>
+    </>
+  );
 }
 
 export default function Ejem_21() {
-  
-  const {count, increment, decrement ,reset} = useCounter()
-
-  return <div>
-    <button onClick={increment}>Sube</button>
-    <button onClick={decrement}>Baja</button>
-    <button onClick={reset}>Resetear</button>
-    <div>{count}</div>
-  </div>
+  return (
+    <div>
+      <ThemeProvider>
+        <A />
+        <B />
+      </ThemeProvider>
+    </div>
+  );
 }
