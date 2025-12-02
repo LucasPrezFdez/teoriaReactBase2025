@@ -1,4 +1,6 @@
-/* Simplifica el Ejercicio_08.tsx usando hooks y genericos */
+/* 
+Crea un formulario en react, que se conecta al endpoint que hemos construido con python (flask)
+*/
 export default function Ejercicio_09() {
 
 
