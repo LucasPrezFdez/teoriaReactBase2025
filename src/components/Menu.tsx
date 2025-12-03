@@ -36,6 +36,7 @@ function Menu() {
             <li><Link to="/Ejercicio06">Ejercicio06</Link></li>
             <li><Link to="/Ejercicio07">Ejercicio07</Link></li>
             <li><Link to="/Ejercicio08">Ejercicio08</Link></li>
+            <li><Link to="/Ejercicio09">Ejercicio09</Link></li>
         </ul> 
     </nav>
      );
