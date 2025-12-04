@@ -14,12 +14,12 @@ export default function Ejercicio_09() {
     num2: 0,
   });
   const [resultado, setResultado] = useState('');
-  const [loading,setLoading] = useState(false)
+  const [loading, setLoading] = useState(false);
 
   async function handleSubmit(e: FormEvent) {
     e.preventDefault();
 
-    setLoading(true)
+    setLoading(true);
     try {
       const response = await fetch('http://127.0.0.1:5000/api/suma', {
         method: 'POST',
@@ -39,13 +39,11 @@ export default function Ejercicio_09() {
       const data = await response.json();
 
       setResultado(data.resultado);
-      setLoading(false)
-
+      setLoading(false);
     } catch (error) {
       console.error('Error', error);
     } finally {
-          setLoading(false)
-
+      setLoading(false);
     }
   }
 
@@ -82,10 +80,16 @@ export default function Ejercicio_09() {
           required
         />
 
-        <button type="submit" disabled={loading} className='hover:bg-blue-600 bg-blue-300 rounded-2xl p-4 m-4'>Enviar</button>
+        <button
+          type="submit"
+          disabled={loading}
+          className="hover:bg-blue-600 bg-blue-400 rounded-2xl p-4 m-4 transition duration-300"
+        >
+          Enviar
+        </button>
       </form>
 
-      {loading?'Calculando':<h3>Resultado: {resultado}</h3>}
+      {loading ? 'Calculando' : <h3>Resultado: {resultado}</h3>}
     </div>
   );
 }
