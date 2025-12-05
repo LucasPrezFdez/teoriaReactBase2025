@@ -10,12 +10,49 @@ Debe existir un UserContext que guarde:
     - Una función logout() para cerrar sesión.
 */
 
-import { useState } from "react"
+import { useState, type ChangeEvent, type FormEvent } from 'react';
+import { useUser } from '../hooks/useUser';
+
+
 
 export default function Ejercicio10() {
-  const [txt , setTxt] = useState('')
+  const { login, logout } = useUser();
+  const [form, setForm] = useState({
+    name: 'Juan',
+    role: 'Admin',
+
+    });
+
+  function handleChange(event: ChangeEvent<HTMLInputElement>) {
+    const { value, name } = event.target;
+    setForm({ ...form, [name]: value });
+  }
+
+  function handleSubmit(e: FormEvent) {
+    e.preventDefault();
+    console.log('se envio el nombre: ', form);
+    login(form);
+  }
+
+  function handleLogOut(e : FormEvent) {
+    e.preventDefault();
+    logout();
+  }
 
   return (
-    <input value={txt} />
-  )
+    <div>
+      <form onSubmit={handleSubmit}>
+        <label htmlFor="">
+          Nombre:
+          <input name="name" value={form.name} onChange={handleChange} />
+        </label>
+        <label htmlFor="">
+          Rol:
+          <input name="role" value={form.role} onChange={handleChange} />
+        </label>
+        <button>Loguearse</button>
+      </form>
+      <button onClick={handleLogOut}>Desloguearse</button>
+    </div>
+  );
 }

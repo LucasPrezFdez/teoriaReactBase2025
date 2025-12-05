@@ -1,8 +1,13 @@
 import { Link } from "react-router-dom";
+import { useUser } from "../hooks/useUser";
 
 function Menu() {
+    const {currentUser, logout} = useUser()
+
     return ( 
+
     <nav className="">
+        <div>{currentUser ? currentUser?.name : 'No estas logueado'}</div>
        <ul className="flex flex-row gap-4 flex-wrap">
             <li><Link to="/Ejem1">Ejem01</Link></li>
             <li><Link to="/Ejem2">Ejem02</Link></li>
@@ -37,6 +42,7 @@ function Menu() {
             <li><Link to="/Ejercicio07">Ejercicio07</Link></li>
             <li><Link to="/Ejercicio08">Ejercicio08</Link></li>
             <li><Link to="/Ejercicio09">Ejercicio09</Link></li>
+            <li><Link to="/Ejercicio10">Ejercicio10</Link></li>
         </ul> 
     </nav>
      );
