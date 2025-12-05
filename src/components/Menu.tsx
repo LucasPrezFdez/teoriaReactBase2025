@@ -43,6 +43,7 @@ function Menu() {
             <li><Link to="/Ejercicio08">Ejercicio08</Link></li>
             <li><Link to="/Ejercicio09">Ejercicio09</Link></li>
             <li><Link to="/Ejercicio10">Ejercicio10</Link></li>
+            <li><Link to="/Ejercicio11">Ejercicio11</Link></li>
         </ul> 
     </nav>
      );
